@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            background: #121212;
+            color: #ededed;
+        }
+
+        #total {
+            text-align: center;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        #inputBtn {
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            background-color: #414141;
+            color: #ededed;
+            border-radius: 6px;
+            position: relative;
+            margin-top: 100%;
+        }
+
+        .main-container {
+            display: none;
+        }
+
+
+        /* spinner styling */
+
+        .spinner {
+            text-align: center;
+        }
+
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            top: 5%;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #fff;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- toastify cdn -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#inputBtn").click(function () {
+                window.location.href = "login.html";
+            });
+
+            function showContent() {
+                $(".spinner").hide();
+                $(".main-container").show();
+            }
+
+            setTimeout(showContent, 2000);
+        });
+    </script>
+    <title>JSD 1000001</title>
+</head>
+
+<body>
+    <!-- spinner -->
+    <div class="spinner">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 id="total">1000001</h1>
+        <button id="inputBtn">Login</button>
+    </div>
+</body>
+
+<!-- toastify cdn -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</html>

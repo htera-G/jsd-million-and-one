@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            background: #121212;
+            color: #ededed;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            background-color: #414141;
+            color: #ededed;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        input {
+            /* margin: 0 auto; */
+            margin-top: 5%;
+            width: 50%;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            background-color: #414141;
+            color: #ededed;
+            border-radius: 6px;
+        }
+
+        label {
+            display: block;
+            margin-top: 2%;
+        }
+
+        .login-container {
+            text-align: center;
+        }
+
+        .score-container {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+
+        #inputPlayer,
+        #inputScore {
+            font-size: 1.6rem;
+        }
+    </style>
+    <!-- toastify cdn -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>JSD 1000001 Login</title>
+</head>
+
+<body>
+    <h1>Enter Pin</h1>
+    <div class="login-container">
+        <input type="password" name="inputPass" id="inputPass">
+        <button id="loginBtn" onclick="checkPin();">Login</button>
+        <button id="backBtn" onclick="backToHome();">Back</button>
+    </div>
+    <div class="score-container">
+        <label for="inputPlayer">Player's Name</label>
+        <input type="text" name="inputPlayer" id="inputPlayer">
+        <label for="inputScore">Score Thrown</label>
+        <input type="text" name="inputScore" id="inputScore">
+        <button id="saveScoreBtn" onclick="saveScore();">Save Score</button>
+    </div>
+</body>
+
+<!-- toastify cdn -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</html>
